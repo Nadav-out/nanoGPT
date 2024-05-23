@@ -125,6 +125,8 @@ class AttentionVisualizer:
 
     def visualize_specific_attention(self, layer_head_pairs=None, num_last_tokens=None, show_layer_head_info=False, prompt_index=0):
         html_output = ""
+        if layer_head_pairs is None:
+            layer_head_pairs = itertools.combinations_with_replacement(range(6),2) # Default value if no layer_head_pairs are provided
         if self.prompts:
             prompt_text = self.prompts[prompt_index]
             att_arr = self.att_arrs[prompt_index]
