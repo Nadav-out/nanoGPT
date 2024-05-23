@@ -130,7 +130,7 @@ class AttentionVisualizer:
             att_arr = self.att_arrs[prompt_index]
             for layer, head in layer_head_pairs:
                 if show_layer_head_info:
-                    html_output += f'<div>Layer {layer + 1}, Head {head + 1}</div>'
+                    html_output += f'<div>Layer {layer}, Head {head}</div>'
                 html_output += '<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; line-height: 18px; margin: 0; padding: 0;">'
                 html_output += self._generate_html_rows_for_attention(prompt_text, att_arr, [(layer, head)], num_last_tokens)
                 html_output += '</table><br>'
@@ -145,7 +145,7 @@ class AttentionVisualizer:
 
         for layer, head in layer_head_pairs:
             if show_layer_head_info:
-                html_output += f'<div>Layer {layer + 1}, Head {head + 1}</div>'
+                html_output += f'<div>Layer {layer}, Head {head}</div>'
             html_output += '<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; line-height: 18px; margin: 0; padding: 0;">'
             
             for prompt_text in prompts:
