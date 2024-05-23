@@ -1,0 +1,41 @@
+name: wandb_sweep
+method: grid
+parameters:
+  learning_rate:
+    values: [0.0001, 0.00016681, 0.00027826, 0.00046416, 0.00077426, 0.00129155, 0.00215443, 0.00359381, 0.00599484, 0.01]
+  weight_decay:
+    values: [5.00000000e-01, 1.94076672e-01, 7.53315095e-02, 2.92401774e-02, 1.13496727e-02, 4.40541340e-03, 1.70997595e-03, 6.63732883e-04, 2.57630139e-04, 1.00000000e-04]
+  p_norm:
+    values: [0.8] #[0.7, 0.8, 1.0, 1.2, 1.5]
+  
+metric:
+  name: val/best_loss
+  goal: minimize
+program: train.py
+command:
+  - python
+  - train.py
+  - "--out_dir=out-shakespeare-char"
+  - "--eval_interval=250"
+  - "--eval_iters=200"
+  - "--log_interval=10"
+  - "--always_save_checkpoint=False"
+  - "--wandb_log=True"
+  - "--wandb_project=shakespeare-char"
+  - "--wandb_run_name=mini-gpt"
+  - "--dataset=shakespeare_char"
+  - "--gradient_accumulation_steps=1"
+  - "--batch_size=64"
+  - "--block_size=256"
+  - "--n_layer=6"
+  - "--n_head=6"
+  - "--n_embd=384"
+  - "--dropout=0.2"
+  - "--max_iters=5000"
+  - "--lr_decay_iters=5000"
+  - "--optimizer_name='PAdam' "
+  
+  - "--beta2=0.99"
+  - "--warmup_iters=100"
+  
+  

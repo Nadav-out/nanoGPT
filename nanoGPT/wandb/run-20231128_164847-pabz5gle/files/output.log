@@ -1,0 +1,25 @@
+
+step 0: train loss 4.2874, val loss 4.2823
+[2023-11-28 16:49:19,139] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:19,855] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:20,827] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:21,107] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:21,550] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:21,835] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:22,259] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:22,562] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:23,152] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:23,408] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:23,833] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+[2023-11-28 16:49:24,096] torch._inductor.utils: [WARNING] using triton random, expect difference from eager
+iter 0: loss 4.2694, time 34542.79ms, mfu -100.00%
+iter 10: loss 3.2451, time 90.36ms, mfu 4.12%
+iter 20: loss 2.7881, time 90.85ms, mfu 4.12%
+iter 30: loss 2.6356, time 94.35ms, mfu 4.10%
+iter 40: loss 2.5765, time 92.92ms, mfu 4.09%
+iter 50: loss 2.5250, time 90.88ms, mfu 4.10%
+iter 60: loss 2.5154, time 93.45ms, mfu 4.08%
+iter 70: loss 2.4939, time 90.74ms, mfu 4.09%
+iter 80: loss 2.4977, time 93.20ms, mfu 4.08%
+iter 90: loss 2.4883, time 93.69ms, mfu 4.07%
+iter 100: loss 2.4675, time 92.94ms, mfu 4.06%

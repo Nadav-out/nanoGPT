@@ -1,0 +1,708 @@
+2023-09-29 15:10:20,156 INFO    StreamThr :28939 [internal.py:wandb_internal():86] W&B internal server running at pid: 28939, started at: 2023-09-29 15:10:20.155274
+2023-09-29 15:10:20,158 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status
+2023-09-29 15:10:20,159 INFO    WriterThread:28939 [datastore.py:open_for_write():85] open: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/run-ce7qf2vg.wandb
+2023-09-29 15:10:20,160 DEBUG   SenderThread:28939 [sender.py:send():380] send: header
+2023-09-29 15:10:20,210 DEBUG   SenderThread:28939 [sender.py:send():380] send: run
+2023-09-29 15:10:20,450 INFO    SenderThread:28939 [dir_watcher.py:__init__():211] watching files in: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files
+2023-09-29 15:10:20,451 INFO    SenderThread:28939 [sender.py:_start_run_threads():1122] run started: ce7qf2vg with start time 1696025420.155678
+2023-09-29 15:10:20,456 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: check_version
+2023-09-29 15:10:20,456 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: check_version
+2023-09-29 15:10:20,561 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: run_start
+2023-09-29 15:10:20,566 DEBUG   HandlerThread:28939 [system_info.py:__init__():32] System info init
+2023-09-29 15:10:20,566 DEBUG   HandlerThread:28939 [system_info.py:__init__():47] System info init done
+2023-09-29 15:10:20,566 INFO    HandlerThread:28939 [system_monitor.py:start():181] Starting system monitor
+2023-09-29 15:10:20,566 INFO    SystemMonitor:28939 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-29 15:10:20,567 INFO    HandlerThread:28939 [system_monitor.py:probe():201] Collecting system info
+2023-09-29 15:10:20,567 INFO    SystemMonitor:28939 [interfaces.py:start():190] Started cpu monitoring
+2023-09-29 15:10:20,568 INFO    SystemMonitor:28939 [interfaces.py:start():190] Started disk monitoring
+2023-09-29 15:10:20,569 INFO    SystemMonitor:28939 [interfaces.py:start():190] Started gpu monitoring
+2023-09-29 15:10:20,570 INFO    SystemMonitor:28939 [interfaces.py:start():190] Started memory monitoring
+2023-09-29 15:10:20,571 INFO    SystemMonitor:28939 [interfaces.py:start():190] Started network monitoring
+2023-09-29 15:10:20,594 DEBUG   HandlerThread:28939 [system_info.py:probe():196] Probing system
+2023-09-29 15:10:20,601 DEBUG   HandlerThread:28939 [system_info.py:_probe_git():181] Probing git
+2023-09-29 15:10:20,615 DEBUG   HandlerThread:28939 [system_info.py:_probe_git():189] Probing git done
+2023-09-29 15:10:20,615 DEBUG   HandlerThread:28939 [system_info.py:probe():244] Probing system done
+2023-09-29 15:10:20,615 DEBUG   HandlerThread:28939 [system_monitor.py:probe():210] {'os': 'Linux-3.10.0-1160.92.1.el7.x86_64-x86_64-with-glibc2.10', 'python': '3.8.13', 'heartbeatAt': '2023-09-29T22:10:20.594158', 'startedAt': '2023-09-29T22:10:20.146236', 'docker': None, 'cuda': None, 'args': ('config/train_shakespeare_char.py', '--out_dir=perp', '--dropout=0.6', '--max_iters=7000', '--weight_decay=0.6', '--grad_clip=0.0'), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/Nadav-out/nanoGPT', 'commit': '5abb1686c018c227134cfc075f381f3b2e85b9ca'}, 'email': 'nadav.out@gmail.com', 'root': '/global/home/users/njo/nanoGPT', 'host': 'ml4hep2', 'username': 'njo', 'executable': '/global/home/users/njo/anaconda3/envs/gaia/bin/python', 'cpu_count': 16, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2221.875, 'min': 1500.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2400.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}], 'disk': {'/': {'total': 96.9096908569336, 'used': 81.65703582763672}}, 'gpu': 'NVIDIA A40', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA A40', 'memory_total': 47850782720}, {'name': 'NVIDIA A40', 'memory_total': 47850782720}, {'name': 'NVIDIA A40', 'memory_total': 47850782720}, {'name': 'NVIDIA A40', 'memory_total': 47850782720}], 'memory': {'total': 503.6625785827637}}
+2023-09-29 15:10:20,616 INFO    HandlerThread:28939 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-29 15:10:20,616 INFO    HandlerThread:28939 [system_monitor.py:probe():214] Publishing system info
+2023-09-29 15:10:20,616 DEBUG   HandlerThread:28939 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-09-29 15:10:20,617 DEBUG   HandlerThread:28939 [system_info.py:_save_pip():68] Saving pip packages done
+2023-09-29 15:10:20,617 DEBUG   HandlerThread:28939 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-09-29 15:10:21,453 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_created():271] file/dir created: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/conda-environment.yaml
+2023-09-29 15:10:21,453 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_created():271] file/dir created: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/requirements.txt
+2023-09-29 15:10:26,765 DEBUG   HandlerThread:28939 [system_info.py:_save_conda():87] Saving conda packages done
+2023-09-29 15:10:26,766 INFO    HandlerThread:28939 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-29 15:10:26,783 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:10:26,783 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 15:10:26,784 DEBUG   SenderThread:28939 [sender.py:send():380] send: files
+2023-09-29 15:10:26,784 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-09-29 15:10:26,794 DEBUG   SenderThread:28939 [sender.py:send():380] send: telemetry
+2023-09-29 15:10:26,795 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:10:26,796 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:10:26,796 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:10:27,211 INFO    wandb-upload_0:28939 [upload_job.py:push():131] Uploaded file /tmp/tmpdw__4hmwwandb/ke7ua2at-wandb-metadata.json
+2023-09-29 15:10:27,456 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/conda-environment.yaml
+2023-09-29 15:10:27,456 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_created():271] file/dir created: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-metadata.json
+2023-09-29 15:10:31,032 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:10:36,033 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:10:36,463 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_created():271] file/dir created: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:36,582 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:10:36,584 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:10:36,584 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:10:36,589 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:10:37,464 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_created():271] file/dir created: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:10:38,466 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:39,467 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:41,469 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:41,471 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:10:41,793 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:10:41,795 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:10:41,795 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:10:44,472 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:46,474 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:46,595 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:10:48,476 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:50,478 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:51,984 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:10:52,479 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:54,481 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:10:54,482 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/config.yaml
+2023-09-29 15:10:56,795 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:10:56,796 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:10:56,797 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:10:58,710 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:10:58,712 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:10:58,712 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:10:58,714 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:10:59,402 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:10:59,485 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:11:00,486 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:02,488 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:04,490 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:04,758 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:06,492 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:08,495 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:09,895 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:10,497 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:11,795 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:11:11,796 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:11:11,796 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:11:13,922 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:11:13,924 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:11:13,924 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:11:13,926 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:11:14,500 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:11:15,078 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:16,502 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:18,504 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:20,091 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:20,506 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:20,571 DEBUG   SystemMonitor:28939 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-29 15:11:20,573 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:11:22,508 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:24,511 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:25,193 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:26,512 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:26,795 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:11:26,796 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:11:26,797 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:11:29,269 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:11:29,271 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:11:29,271 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:11:29,274 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:11:29,515 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:11:30,425 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:30,516 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:32,518 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:34,520 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:35,454 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:36,522 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:38,524 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:40,526 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:40,638 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:41,802 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:11:41,803 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:11:41,804 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:11:44,690 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:11:44,692 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:11:44,692 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:11:44,694 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:11:45,530 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:11:45,831 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:46,531 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:48,533 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:50,535 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:50,575 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:11:51,207 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:11:52,537 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:54,539 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:56,541 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:11:56,802 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:11:56,803 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:11:56,804 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:11:56,915 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:00,014 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:12:00,016 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:12:00,016 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:12:00,018 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:12:00,544 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:12:01,988 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:02,546 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:04,548 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:06,550 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:07,379 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:08,552 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:10,554 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:11,805 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:12:11,806 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:12:11,807 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:12:12,555 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:12,951 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:15,337 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:12:15,339 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:12:15,339 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:12:15,341 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:12:15,573 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:12:16,574 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:18,182 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:18,576 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:20,575 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:12:20,578 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:22,580 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:23,228 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:24,582 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:26,584 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:26,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:12:26,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:12:26,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:12:28,948 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:30,780 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:12:30,782 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:12:30,782 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:12:30,783 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:12:31,587 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:12:32,588 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:34,000 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:34,590 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:36,592 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:38,594 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:39,000 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:40,596 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:41,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:12:41,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:12:41,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:12:42,598 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:44,904 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:46,118 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:12:46,120 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:12:46,120 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:12:46,122 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:12:46,600 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:12:48,602 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:50,129 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:50,577 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:12:50,604 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:52,606 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:54,608 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:55,528 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:12:56,610 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:12:56,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:12:56,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:12:56,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:12:58,612 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:00,938 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:01,428 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:13:01,430 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:13:01,430 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:13:01,432 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:13:01,656 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:13:02,657 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:04,659 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:06,306 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:06,661 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:08,663 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:10,665 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:11,700 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:11,808 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:13:11,808 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:13:11,812 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:13:12,667 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:16,726 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:13:16,727 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:16,728 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:13:16,728 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:13:16,730 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:13:17,671 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:13:18,672 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:20,578 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:13:20,674 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:22,028 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:22,676 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:24,678 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:26,680 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:26,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:13:26,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:13:26,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:13:27,066 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:28,682 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:32,098 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:13:32,100 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:13:32,100 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:13:32,101 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:32,101 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:13:32,685 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:13:34,686 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:36,688 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:37,495 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:38,689 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:40,691 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:41,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:13:41,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:13:41,811 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:13:42,511 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:42,693 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:44,694 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:47,496 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:13:47,498 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:13:47,498 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:13:47,500 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:13:47,749 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:13:47,840 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:48,750 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:50,580 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:13:50,752 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:52,753 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:53,264 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:13:54,755 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:56,757 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:56,808 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:13:56,809 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:13:56,811 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:13:58,758 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:13:58,815 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:02,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:14:02,810 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:14:02,811 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:14:02,812 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:14:03,762 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:14:03,999 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:04,763 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:06,764 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:08,766 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:09,021 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:10,768 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:11,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:14:11,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:14:11,811 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:14:12,770 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:14,171 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:14,772 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:18,182 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:14:18,184 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:14:18,184 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:14:18,186 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:14:18,774 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:14:19,390 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:20,582 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:14:20,776 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:22,778 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:24,410 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:24,779 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:26,780 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:26,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:14:26,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:14:26,811 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:14:28,782 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:29,612 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:30,784 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:33,610 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:14:33,612 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:14:33,612 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:14:33,613 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:14:33,817 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:14:34,764 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:34,818 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:36,820 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:38,822 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:40,161 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:40,823 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:41,808 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:14:41,809 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:14:41,812 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:14:42,825 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:44,827 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:45,891 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:48,899 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:14:48,900 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:14:48,900 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:14:48,901 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:14:49,830 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:14:50,584 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:14:50,831 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:51,269 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:52,834 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:54,836 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:56,597 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:14:56,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:14:56,809 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:14:56,812 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:14:56,838 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:14:58,840 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:00,842 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:02,057 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:04,041 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:15:04,043 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:15:04,043 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:15:04,044 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:15:04,846 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:04,846 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:15:06,847 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:07,400 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:08,850 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:10,851 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:11,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:15:11,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:15:11,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:15:12,779 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:12,853 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:14,855 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:16,857 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:18,434 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:19,447 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:15:19,448 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:15:19,449 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:15:19,450 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:15:19,859 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:15:20,585 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:15:20,861 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:22,862 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:23,631 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:24,864 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:26,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:15:26,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:15:26,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:15:26,866 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:28,868 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:29,022 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:30,870 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:34,427 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:15:34,428 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:34,428 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:15:34,429 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:15:34,430 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:15:34,874 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:15:36,875 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:38,877 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:39,437 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:40,879 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:41,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:15:41,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:15:41,812 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:15:42,882 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:44,884 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:45,426 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:46,886 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:49,415 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:15:49,416 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:15:49,417 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:15:49,418 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:15:49,888 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:15:50,587 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:15:50,588 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:50,889 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:52,891 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:54,893 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:55,683 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:15:56,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:15:56,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:15:56,813 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:15:56,895 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:15:58,898 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:00,900 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:01,413 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:04,405 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:16:04,407 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:16:04,408 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:16:04,409 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:16:04,902 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:16:06,479 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:06,904 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:08,905 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:10,907 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:11,523 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:11,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:16:11,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:16:11,813 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:16:12,909 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:14,911 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:16,840 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:16,913 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:19,827 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:16:19,829 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:16:19,829 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:16:19,831 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:16:19,915 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:16:20,589 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:16:20,916 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:22,221 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:22,918 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:24,920 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:26,809 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:16:26,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:16:26,811 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:16:26,922 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:27,248 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:28,924 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:30,926 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:33,104 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:35,093 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:16:35,095 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:16:35,095 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:16:35,097 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:16:35,930 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:16:36,931 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:38,464 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:38,934 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:40,935 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:41,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:16:41,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:16:41,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:16:42,937 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:43,860 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:44,939 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:46,941 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:49,100 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:50,092 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:16:50,094 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:16:50,094 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:16:50,096 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:16:50,591 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:16:50,945 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:50,945 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:16:52,947 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:54,232 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:16:54,949 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:56,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:16:56,811 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:16:56,811 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:16:56,951 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:58,953 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:16:59,571 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:00,955 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:04,965 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:17:04,967 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:04,967 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:17:04,968 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:17:04,969 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:17:05,957 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:17:06,959 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:08,960 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:10,379 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:10,962 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:11,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:17:11,811 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:17:11,813 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:17:12,964 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:14,966 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:15,932 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:16,968 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:20,039 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:17:20,040 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:17:20,040 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:17:20,041 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:17:20,592 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:17:20,971 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:20,971 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:17:21,196 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:22,973 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:24,975 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:26,575 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:26,810 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:17:26,810 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:17:26,811 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:17:26,976 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:28,979 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:30,981 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:31,837 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:32,982 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:36,838 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:41,826 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:17:41,827 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:17:41,827 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:17:41,974 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:43,003 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:17:43,005 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:17:43,005 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:17:43,007 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:17:43,990 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:17:44,991 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:46,993 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:47,287 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:48,995 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:50,593 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:17:50,997 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:52,839 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:52,999 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:55,001 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:56,827 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:17:56,827 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:17:56,828 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:17:57,002 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:17:58,259 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:17:59,004 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:18:01,006 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:18:03,008 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:18:03,867 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:18:08,868 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:18:11,832 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 15:18:11,832 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:18:11,833 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: stop_status
+2023-09-29 15:18:11,956 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 15:18:11,985 DEBUG   SenderThread:28939 [sender.py:send():380] send: history
+2023-09-29 15:18:11,985 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: summary_record
+2023-09-29 15:18:11,987 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:18:12,015 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:18:12,365 DEBUG   SenderThread:28939 [sender.py:send():380] send: exit
+2023-09-29 15:18:12,365 INFO    SenderThread:28939 [sender.py:send_exit():585] handling exit code: 0
+2023-09-29 15:18:12,365 INFO    SenderThread:28939 [sender.py:send_exit():587] handling runtime: 471
+2023-09-29 15:18:12,367 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:18:12,367 INFO    SenderThread:28939 [sender.py:send_exit():593] send defer
+2023-09-29 15:18:12,368 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,368 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 0
+2023-09-29 15:18:12,368 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,369 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-09-29 15:18:12,369 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 1
+2023-09-29 15:18:12,369 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,369 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 1
+2023-09-29 15:18:12,369 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,369 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-09-29 15:18:12,369 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 2
+2023-09-29 15:18:12,370 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,370 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 2
+2023-09-29 15:18:12,370 INFO    HandlerThread:28939 [system_monitor.py:finish():190] Stopping system monitor
+2023-09-29 15:18:12,370 DEBUG   SystemMonitor:28939 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-09-29 15:18:12,371 DEBUG   SystemMonitor:28939 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-09-29 15:18:12,371 INFO    HandlerThread:28939 [interfaces.py:finish():202] Joined cpu monitor
+2023-09-29 15:18:12,373 INFO    HandlerThread:28939 [interfaces.py:finish():202] Joined disk monitor
+2023-09-29 15:18:12,728 INFO    HandlerThread:28939 [interfaces.py:finish():202] Joined gpu monitor
+2023-09-29 15:18:12,729 INFO    HandlerThread:28939 [interfaces.py:finish():202] Joined memory monitor
+2023-09-29 15:18:12,729 INFO    HandlerThread:28939 [interfaces.py:finish():202] Joined network monitor
+2023-09-29 15:18:12,730 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,731 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-09-29 15:18:12,731 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 3
+2023-09-29 15:18:12,731 DEBUG   SenderThread:28939 [sender.py:send():380] send: stats
+2023-09-29 15:18:12,731 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,732 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 3
+2023-09-29 15:18:12,732 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,732 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-09-29 15:18:12,733 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 4
+2023-09-29 15:18:12,733 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,733 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 4
+2023-09-29 15:18:12,733 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,733 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-09-29 15:18:12,733 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 5
+2023-09-29 15:18:12,733 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,733 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 5
+2023-09-29 15:18:12,734 DEBUG   SenderThread:28939 [sender.py:send():380] send: summary
+2023-09-29 15:18:12,735 INFO    SenderThread:28939 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-29 15:18:12,736 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,736 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-09-29 15:18:12,736 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 6
+2023-09-29 15:18:12,736 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,736 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 6
+2023-09-29 15:18:12,737 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,737 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-09-29 15:18:12,737 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 7
+2023-09-29 15:18:12,737 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 15:18:12,737 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:12,737 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 7
+2023-09-29 15:18:12,738 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:12,738 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-09-29 15:18:13,016 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:18:13,017 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:18:13,365 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-29 15:18:13,814 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 8
+2023-09-29 15:18:13,814 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: poll_exit
+2023-09-29 15:18:13,815 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:13,815 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 8
+2023-09-29 15:18:13,816 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:13,816 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-09-29 15:18:13,816 INFO    SenderThread:28939 [job_builder.py:build():281] Attempting to build job artifact
+2023-09-29 15:18:13,817 INFO    SenderThread:28939 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-09-29 15:18:13,821 INFO    SenderThread:28939 [job_builder.py:build():369] adding wandb-job metadata file
+2023-09-29 15:18:13,845 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 9
+2023-09-29 15:18:13,846 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:13,846 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 9
+2023-09-29 15:18:13,846 DEBUG   SenderThread:28939 [sender.py:send():380] send: artifact
+2023-09-29 15:18:14,017 INFO    Thread-12 :28939 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:18:14,284 INFO    SenderThread:28939 [sender.py:send_artifact():1456] sent artifact job-https___github.com_Nadav-out_nanoGPT_train.py - {'id': 'QXJ0aWZhY3Q6NTg5MDQxOTY4', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEwMjUzNjEwOA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTg5MDQxOTY4', 'versionIndex': 0}}}
+2023-09-29 15:18:14,284 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:14,284 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-09-29 15:18:14,284 INFO    SenderThread:28939 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-09-29 15:18:14,366 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-29 15:18:15,019 INFO    SenderThread:28939 [dir_watcher.py:finish():388] scan: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files
+2023-09-29 15:18:15,019 INFO    SenderThread:28939 [dir_watcher.py:finish():402] scan save: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/config.yaml config.yaml
+2023-09-29 15:18:15,019 INFO    SenderThread:28939 [dir_watcher.py:finish():402] scan save: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/requirements.txt requirements.txt
+2023-09-29 15:18:15,020 INFO    SenderThread:28939 [dir_watcher.py:finish():402] scan save: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/conda-environment.yaml conda-environment.yaml
+2023-09-29 15:18:15,023 INFO    SenderThread:28939 [dir_watcher.py:finish():402] scan save: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-metadata.json wandb-metadata.json
+2023-09-29 15:18:15,023 INFO    SenderThread:28939 [dir_watcher.py:finish():402] scan save: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log output.log
+2023-09-29 15:18:15,027 INFO    SenderThread:28939 [dir_watcher.py:finish():402] scan save: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json wandb-summary.json
+2023-09-29 15:18:15,027 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 10
+2023-09-29 15:18:15,027 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: poll_exit
+2023-09-29 15:18:15,028 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:15,028 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 10
+2023-09-29 15:18:15,029 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:15,029 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-09-29 15:18:15,032 INFO    SenderThread:28939 [file_pusher.py:finish():175] shutting down file pusher
+2023-09-29 15:18:15,350 INFO    wandb-upload_1:28939 [upload_job.py:push():131] Uploaded file /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/config.yaml
+2023-09-29 15:18:15,364 INFO    wandb-upload_0:28939 [upload_job.py:push():131] Uploaded file /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/requirements.txt
+2023-09-29 15:18:15,367 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-29 15:18:15,368 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: poll_exit
+2023-09-29 15:18:15,440 INFO    wandb-upload_4:28939 [upload_job.py:push():131] Uploaded file /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/wandb-summary.json
+2023-09-29 15:18:15,448 INFO    wandb-upload_3:28939 [upload_job.py:push():131] Uploaded file /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/output.log
+2023-09-29 15:18:15,458 INFO    wandb-upload_2:28939 [upload_job.py:push():131] Uploaded file /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/files/conda-environment.yaml
+2023-09-29 15:18:15,658 INFO    Thread-11 :28939 [sender.py:transition_state():613] send defer: 11
+2023-09-29 15:18:15,659 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:15,659 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 11
+2023-09-29 15:18:15,660 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:15,660 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-09-29 15:18:15,660 INFO    SenderThread:28939 [file_pusher.py:join():181] waiting for file pusher
+2023-09-29 15:18:15,660 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 12
+2023-09-29 15:18:15,660 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:15,660 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 12
+2023-09-29 15:18:15,661 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:15,661 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-09-29 15:18:15,661 INFO    SenderThread:28939 [file_stream.py:finish():595] file stream finish called
+2023-09-29 15:18:15,769 INFO    SenderThread:28939 [file_stream.py:finish():599] file stream finish is done
+2023-09-29 15:18:15,769 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 13
+2023-09-29 15:18:15,770 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:15,770 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 13
+2023-09-29 15:18:15,770 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:15,770 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-09-29 15:18:15,770 INFO    SenderThread:28939 [sender.py:transition_state():613] send defer: 14
+2023-09-29 15:18:15,770 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: defer
+2023-09-29 15:18:15,771 INFO    HandlerThread:28939 [handler.py:handle_request_defer():170] handle defer: 14
+2023-09-29 15:18:15,771 DEBUG   SenderThread:28939 [sender.py:send():380] send: final
+2023-09-29 15:18:15,771 DEBUG   SenderThread:28939 [sender.py:send():380] send: footer
+2023-09-29 15:18:15,771 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: defer
+2023-09-29 15:18:15,771 INFO    SenderThread:28939 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-09-29 15:18:15,772 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-29 15:18:15,772 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: poll_exit
+2023-09-29 15:18:15,773 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-29 15:18:15,773 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: poll_exit
+2023-09-29 15:18:15,774 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: server_info
+2023-09-29 15:18:15,774 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: server_info
+2023-09-29 15:18:15,776 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: get_summary
+2023-09-29 15:18:15,777 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: sampled_history
+2023-09-29 15:18:15,778 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-29 15:18:15,778 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: job_info
+2023-09-29 15:18:15,845 DEBUG   SenderThread:28939 [sender.py:send_request():407] send_request: job_info
+2023-09-29 15:18:15,846 INFO    MainThread:28939 [wandb_run.py:_footer_history_summary_info():3554] rendering history
+2023-09-29 15:18:15,846 INFO    MainThread:28939 [wandb_run.py:_footer_history_summary_info():3586] rendering summary
+2023-09-29 15:18:15,847 INFO    MainThread:28939 [wandb_run.py:_footer_sync_info():3513] logging synced files
+2023-09-29 15:18:15,847 DEBUG   HandlerThread:28939 [handler.py:handle_request():144] handle_request: shutdown
+2023-09-29 15:18:15,847 INFO    HandlerThread:28939 [handler.py:finish():844] shutting down handler
+2023-09-29 15:18:16,779 INFO    WriterThread:28939 [datastore.py:close():294] close: /global/home/users/njo/nanoGPT/wandb/run-20230929_151020-ce7qf2vg/run-ce7qf2vg.wandb
+2023-09-29 15:18:16,845 INFO    SenderThread:28939 [sender.py:finish():1534] shutting down sender
+2023-09-29 15:18:16,846 INFO    SenderThread:28939 [file_pusher.py:finish():175] shutting down file pusher
+2023-09-29 15:18:16,846 INFO    SenderThread:28939 [file_pusher.py:join():181] waiting for file pusher
