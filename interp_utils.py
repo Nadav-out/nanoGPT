@@ -1,7 +1,7 @@
 import torch
 import pickle
 import numpy as np
-
+import itertools
 
 # Load the dictionary
 with open('../data/parliment_names/meta.pkl', 'rb') as f:
@@ -35,7 +35,6 @@ decode_member = lambda l: ''.join([itos_member[i] for i in l])
 
 
 
-
 class AttentionVisualizer:
     def __init__(self, model, device):
         self.model = model
@@ -44,8 +43,8 @@ class AttentionVisualizer:
         self.num_heads = model.transformer.h[0].attn.n_head
         self.attention_data = {}
         self.hooks = []
-        self.prompt_text = ""
-        self.att_arr = None
+        self.prompts = []
+        self.att_arrs = []
 
     def _attention_hook(self, layer_idx):
         def hook(module, input, output):
@@ -66,8 +65,6 @@ class AttentionVisualizer:
     def prompt(self, sample_text):
         self.attention_data = {}
         self._register_hooks()
-        self.prompt_text = sample_text
-
 
         # Encode the sample text
         ids = encode(sample_text)
@@ -82,21 +79,19 @@ class AttentionVisualizer:
 
         # Organize the collected attention data into a tensor
         T = next(iter(self.attention_data.values())).size(-1)  # Sequence length
-        self.att_arr = torch.empty(self.num_layers, self.num_heads, T, T)
+        att_arr = torch.empty(self.num_layers, self.num_heads, T, T)
         for layer_idx in range(self.num_layers):
             if layer_idx in self.attention_data:
-                self.att_arr[layer_idx] = self.attention_data[layer_idx]
+                att_arr[layer_idx] = self.attention_data[layer_idx]
 
-    def visualize_specific_attention_html(self, layer_head_pairs=None, num_last_tokens=None, show_layer_head_info=False):
-        text = self.prompt_text
-        att_arr = self.att_arr
+        # Store the prompt and its attention data
+        self.prompts.append(sample_text)
+        self.att_arrs.append(att_arr)
+
+    def _generate_html_rows_for_attention(self, text, att_arr, layer_head_pairs, num_last_tokens):
         text_and_line_color = '#808080'
-
-        if layer_head_pairs is None or not layer_head_pairs:
-            layer_head_pairs = [(layer, head) for layer in range(att_arr.shape[0]) for head in range(att_arr.shape[1])]
-
+        html_rows = ""
         start_index = 0 if num_last_tokens is None else max(0, len(text) - num_last_tokens)
-        html_output = ""
 
         for layer, head in layer_head_pairs:
             if layer < att_arr.shape[0] and head < att_arr.shape[1]:
@@ -106,14 +101,9 @@ class AttentionVisualizer:
                 char_width = 9
                 char_height = 18
                 replacement_width = char_width * len(next(iter(new_decoded_members.values()))) // 2
-                if show_layer_head_info:
-                    html_text = f'<div>Layer {layer}, Head {head}</div>'
-                else:
-                    html_text = ''
-                html_text += f'<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; line-height: {char_height}px; margin: 0; padding: 0;">'
 
                 for i in range(start_index, len(text)):
-                    html_text += '<tr>'
+                    html_rows += '<tr>'
                     for j in range(len(text)):
                         if text[j] in new_decoded_members:
                             char = new_decoded_members[text[j]]
@@ -125,17 +115,43 @@ class AttentionVisualizer:
                         background_color = f'rgba(70, 130, 60, {color_weight})'
 
                         if j == i:
-                            html_text += f'<td style="background-color: {background_color}; color: {text_and_line_color}; width: {width}px; height: {char_height}px; font-size: 12px; font-family: monospace; border: 2px solid {text_and_line_color}; text-align: center; white-space: nowrap; padding: 0; margin: 0;">{char}</td>'
+                            html_rows += f'<td style="background-color: {background_color}; color: {text_and_line_color}; width: {width}px; height: {char_height}px; font-size: 12px; font-family: monospace; border: 2px solid {text_and_line_color}; text-align: center; white-space: nowrap; padding: 0; margin: 0;">{char}</td>'
                         elif j < i:
-                            html_text += f'<td style="background-color: {background_color}; color: {text_and_line_color}; width: {width}px; height: {char_height}px; font-size: 12px; font-family: monospace; border: 1px solid {text_and_line_color}; text-align: center; white-space: nowrap; padding: 0; margin: 0;">{char}</td>'
+                            html_rows += f'<td style="background-color: {background_color}; color: {text_and_line_color}; width: {width}px; height: {char_height}px; font-size: 12px; font-family: monospace; border: 1px solid {text_and_line_color}; text-align: center; white-space: nowrap; padding: 0; margin: 0;">{char}</td>'
                         else:
-                            html_text += f'<td style="background-color: rgba(70, 130, 80, 0); color: rgba(70, 130, 80, 0); width: {width}px; height: {char_height}px; font-size: 12px; font-family: monospace; border: 0px solid {text_and_line_color}; text-align: center; white-space: nowrap; padding: 0; margin: 0;"></td>'
-                    html_text += '</tr>'
-                html_text += '</table><br>'
+                            html_rows += f'<td style="background-color: rgba(70, 130, 80, 0); color: rgba(70, 130, 80, 0); width: {width}px; height: {char_height}px; font-size: 12px; font-family: monospace; border: 0px solid {text_and_line_color}; text-align: center; white-space: nowrap; padding: 0; margin: 0;"></td>'
+                    html_rows += '</tr>'
+        return html_rows
 
-                html_output += html_text
-            else:
-                print(f"Invalid layer ({layer}) or head ({head}) index.")
-
+    def visualize_specific_attention(self, layer_head_pairs=None, num_last_tokens=None, show_layer_head_info=False, prompt_index=0):
+        html_output = ""
+        if self.prompts:
+            prompt_text = self.prompts[prompt_index]
+            att_arr = self.att_arrs[prompt_index]
+            for layer, head in layer_head_pairs:
+                if show_layer_head_info:
+                    html_output += f'<div>Layer {layer + 1}, Head {head + 1}</div>'
+                html_output += '<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; line-height: 18px; margin: 0; padding: 0;">'
+                html_output += self._generate_html_rows_for_attention(prompt_text, att_arr, [(layer, head)], num_last_tokens)
+                html_output += '</table><br>'
         return html_output
 
+    def visualize_multiple_attention(self, layer_head_pairs=None, prompts=None, num_last_tokens=1, show_layer_head_info=False):
+        html_output = ""
+        if layer_head_pairs is None:
+            layer_head_pairs = itertools.combinations_with_replacement(range(6),2) # Default value if no layer_head_pairs are provided
+        if prompts is None:
+            prompts = self.prompts[1:]  # Default to self.prompts[1:] if prompts are not provided
+
+        for layer, head in layer_head_pairs:
+            if show_layer_head_info:
+                html_output += f'<div>Layer {layer + 1}, Head {head + 1}</div>'
+            html_output += '<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; line-height: 18px; margin: 0; padding: 0;">'
+            
+            for prompt_text in prompts:
+                att_arr = self.att_arrs[self.prompts.index(prompt_text)]
+                html_output += self._generate_html_rows_for_attention(prompt_text, att_arr, [(layer, head)], num_last_tokens)
+            
+            html_output += '</table><br>'
+        
+        return html_output
